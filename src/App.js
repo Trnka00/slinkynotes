@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import NoteList from './components/NoteList';
+import NoteCreate from './components/NoteCreate';
+import NoteEdit from './components/NoteEdit';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import NoteContextProvider from './context/NoteContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // using react-router for navigation
+    <div className="app">
+      <NoteContextProvider>
+        <Router>
+          <Header />
+          <Sidebar />
+          <div className="page">
+            <Switch>
+              <Route exact path="/" component={NoteList} />
+              <Route path="/create" component={NoteCreate} />
+              <Route path="/edit/:id" component={NoteEdit} />
+            </Switch>
+          </div>
+        </Router>
+      </NoteContextProvider>
     </div>
   );
 }
