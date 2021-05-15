@@ -1,0 +1,57 @@
+.note-create {
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.create-form input,
+textarea {
+  background-color: #e4e4e4;
+  outline: none;
+  resize: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4rem;
+}
+
+.create-form input {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 30rem;
+}
+.create-form textarea {
+  height: 160px;
+  width: 30rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 750px) {
+  .create-form input {
+    width: 90%;
+  }
+  .create-form textarea {
+    width: 90%;
+  }
+}
+
+.create-form button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #000000;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+.create-form button:hover {
+  cursor: pointer;
+  background-color: #2e2e2e;
+}
+.create-form button:active {
+  cursor: pointer;
+  background-color: rgb(75, 75, 75);
+}
+.text-label,
+.title-label {
+  font-size: 1.4rem;
+}

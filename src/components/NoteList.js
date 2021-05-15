@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import NoteCard from './NoteCard';
+import NoteCard from './NoteCard/NoteCard';
 import Masonry from 'react-masonry-css';
 
 import { NoteContext } from './../context/NoteContext';

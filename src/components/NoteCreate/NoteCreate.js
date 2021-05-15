@@ -3,7 +3,8 @@ import { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { v1 } from 'uuid';
 
-import { NoteContext } from './../context/NoteContext';
+import { NoteContext } from '../../context/NoteContext';
+import NoteCreateCss from './NoteCreate.module.css';
 
 const NoteCreate = () => {
   const [title, setTitle] = useState('');
@@ -18,10 +19,14 @@ const NoteCreate = () => {
   };
 
   return (
-    <div className="note-create">
-      <h2 className="create-title">Create Note</h2>
-      <form action="submit" onSubmit={handleSubmit} className="create-form">
-        <label className="title-label">add a title:</label>
+    <div className={NoteCreateCss['note-create']}>
+      <h2 className={NoteCreateCss['create-title']}>Create Note</h2>
+      <form
+        action="submit"
+        onSubmit={handleSubmit}
+        className={NoteCreateCss['create-form']}
+      >
+        <label className={NoteCreateCss['title-label']}>add a title:</label>
         <br />
         <input
           required
@@ -30,7 +35,7 @@ const NoteCreate = () => {
           value={title}
         />
         <br />
-        <label className="text-label">write text:</label>
+        <label className={NoteCreateCss['text-label']}>write text:</label>
         <br />
         <textarea
           required

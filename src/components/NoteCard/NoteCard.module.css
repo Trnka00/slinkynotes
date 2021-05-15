@@ -1,0 +1,44 @@
+.note-card {
+  padding: 1rem;
+  height: min-content;
+  border-radius: 5px;
+}
+.note-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.note-heading h3 {
+  font-size: 1.6rem;
+  width: 16rem;
+  overflow-wrap: break-word;
+}
+
+.note-paragraph {
+  display: inline-block;
+  width: 18rem;
+  overflow-wrap: break-word;
+  font-size: 1.4rem;
+}
+
+.btn-wrap {
+  display: flex;
+  width: 3.5rem;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+.btn-wrap img {
+  padding: 0.2rem;
+  height: 1.8rem;
+}
+
+.btn-wrap img:hover {
+  cursor: pointer;
+  background-color: rgb(165, 165, 165);
+  border-radius: 50%;
+}
+.btn-wrap img:active {
+  opacity: 0.3;
+  cursor: pointer;
+}

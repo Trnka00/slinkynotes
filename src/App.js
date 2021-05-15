@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import NoteList from './components/NoteList';
-import NoteCreate from './components/NoteCreate';
+import NoteCreate from './components/NoteCreate/NoteCreate';
 import NoteEdit from './components/NoteEdit';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
+import Sidebar from './components/Sidebar/Sidebar';
+import Header from './components/Header/Header';
 import NoteContextProvider from './context/NoteContext';
 
 function App() {
